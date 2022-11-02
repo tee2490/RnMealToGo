@@ -14,17 +14,17 @@ interface Props {
 }
 
 const RestaurantCard = styled<any>(Card)`
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
 const RestaurantCardCover = styled<any>(Card.Cover)`
-  padding: 20px;
+  padding:  ${(props) => props.theme.space[3]};
   background-color: white;
 `;
 
 const Title = styled<any>(Text)`
-  padding: 16px;
-  color: red;
+  padding: ${(props) => props.theme.space[3]};
+  color: ${props=>props.theme.colors.ui.primary}
 `;
  
 
