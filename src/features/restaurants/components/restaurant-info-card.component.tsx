@@ -5,6 +5,7 @@ import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 interface Props {
   name?: string;
@@ -89,9 +90,9 @@ export default function RestaurantInfoCard(restaurant: Props) {
                 CLOSED TEMPORARILY
               </Text>
             )}
-            <View style={{ paddingLeft: 16 }} />
+            <Spacer variant="left.medium"/>
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
-            <View style={{ paddingLeft: 16 }} />
+            <Spacer variant="left.medium"/>
             <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
           </SectionEnd>
         </Section>
